@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="visit-grid">
           <div className="visit-brand">
             <h2 className="display">
-              Book Now to Secure Availability
+              {c.bookNowTitle}
             </h2>
             <p>{c.lead}</p>
           </div>

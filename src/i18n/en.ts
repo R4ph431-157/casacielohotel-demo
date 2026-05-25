@@ -77,6 +77,7 @@ export const en: Translations = {
       ],
     },
     contact: {
+      bookNowTitle: 'Book Now to Secure Availability',
       lead: 'The Hotel La Casa Cielo is one of the most stylish hotels in Benin. This modern take on the traditional alpine lodge is located at the foot of Benin.',
       address: {
         title: 'Address',
