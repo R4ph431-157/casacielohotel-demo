@@ -53,8 +53,26 @@ export const fr = {
     },
     testimonial: {
       eyebrow: "Ce qu'on en dit",
-      quote: "Un havre paisible, à deux pas de l'aéroport mais à mille lieues de l'agitation. Le personnel attentif, les chambres impeccables, et le bruit de l'océan qui berce les nuits. Nous reviendrons.",
-      author: 'Sophie M. — Voyageuse, France',
+      score: '8.6',
+      scoreLabel: 'Très Bien',
+      scoreSrc: 'Note globale vérifiée',
+      reviews: [
+        {
+          quote: "Un havre paisible, à deux pas de l'aéroport mais à mille lieues de l'agitation. Le personnel attentif, les chambres impeccables, et le bruit de l'océan qui berce les nuits. Nous reviendrons.",
+          author: 'Sophie M.',
+          origin: 'France',
+        },
+        {
+          quote: "Parfait pour un séjour d'affaires. Les salles de réunion sont bien équipées, la connexion impeccable, et le restaurant offre une vue splendide sur la mer.",
+          author: 'Amina K.',
+          origin: 'Lagos, Nigeria',
+        },
+        {
+          quote: "Une oasis de calme et de luxe. La piscine est magnifique et le personnel aux petits soins. Je recommande vivement cet établissement !",
+          author: 'Marie-Claire D.',
+          origin: "Abidjan, Côte d'Ivoire",
+        },
+      ],
     },
     contact: {
       subtitle: 'Hôtel · Cotonou',

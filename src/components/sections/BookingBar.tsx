@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
+
+const BOOKING_URL = 'https://live.ipms247.com/booking/book-rooms-hotellacasacielo';
 
 export default function BookingBar() {
   const { t } = useLanguage();
   const b = t.home.booking;
-  const navigate = useNavigate();
 
   const today = new Date().toISOString().split('T')[0];
   const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
@@ -16,7 +16,7 @@ export default function BookingBar() {
   const [room, setRoom] = useState(b.roomOptions[0]);
 
   const handleCheck = () => {
-    navigate(`/reservations?arrival=${arrival}&departure=${departure}&guests=${encodeURIComponent(guests)}&room=${encodeURIComponent(room)}`);
+    window.open(BOOKING_URL, '_blank', 'noopener,noreferrer');
   };
 
   return (

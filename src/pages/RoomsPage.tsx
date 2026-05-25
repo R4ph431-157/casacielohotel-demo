@@ -1,13 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import PageFooter from '../components/layout/PageFooter';
 import { useLanguage } from '../context/LanguageContext';
 
 const roomClasses = ['room-1', 'room-2', 'room-3', 'room-4'];
+const BOOKING_URL = 'https://live.ipms247.com/booking/book-rooms-hotellacasacielo';
 
 export default function RoomsPage() {
   const { t } = useLanguage();
   const r = t.rooms;
-  const navigate = useNavigate();
 
   return (
     <>
@@ -43,7 +42,7 @@ export default function RoomsPage() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '64px' }}>
-          <button className="btn-gold" onClick={() => navigate('/reservations')}>
+          <button className="btn-gold" onClick={() => window.open(BOOKING_URL, '_blank', 'noopener,noreferrer')}>
             {r.bookRoom}
           </button>
         </div>

@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
         <p className="lead">{h.lead}</p>
         <div className="hero-cta-row">
-          <button className="btn-gold" onClick={() => navigate('/reservations')}>
+          <button className="btn-gold" onClick={() => window.open('https://live.ipms247.com/booking/book-rooms-hotellacasacielo', '_blank', 'noopener,noreferrer')}>
             {h.bookStay}
           </button>
           <button className="btn-outline" onClick={() => navigate('/hotel')}>

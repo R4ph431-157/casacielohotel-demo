@@ -756,6 +756,25 @@ section { padding: 140px 56px; position: relative; }
 .testimonial-author { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
 .testimonial-author .stars { color: var(--gold); margin-bottom: 8px; display: block; letter-spacing: .2em; font-size: 14px; }
 
+.testimonial-score-row { display: flex; align-items: center; justify-content: center; gap: 28px; margin: 48px 0 80px; }
+.score-badge { display: flex; flex-direction: column; align-items: center; background: var(--ocean-deep); padding: 20px 32px; gap: 2px; }
+.score-value { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; line-height: 1; color: var(--gold-light); }
+.score-denom { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(250,246,236,.5); }
+.score-meta { text-align: left; }
+.score-label { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: var(--ocean-deep); display: block; }
+.score-src { font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--ink-soft); display: block; margin-top: 6px; }
+.testimonial-reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1240px; margin: 0 auto; text-align: left; }
+.testimonial-card { padding: 40px; background: #fff; border: 1px solid var(--line); }
+.testimonial-card .stars { color: var(--gold); letter-spacing: .2em; font-size: 12px; display: block; margin-bottom: 20px; }
+.testimonial-card .testimonial-quote { font-size: clamp(15px, 1.3vw, 18px); margin: 0 0 24px; max-width: none; }
+.testimonial-card .testimonial-quote::before,
+.testimonial-card .testimonial-quote::after { font-size: 1em; }
+.testimonial-card .testimonial-author { font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
+
+.map-frame.map-real { background: none; }
+.map-frame.map-real::before { display: none; }
+.map-frame.map-real iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+
 /* ── CONTACT / FOOTER ── */
 .visit { background: var(--ocean-deep); color: var(--bone); padding: 140px 56px 80px; }
 .visit-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; max-width: 1400px; margin: 0 auto 80px; }
@@ -1750,6 +1769,9 @@ section { padding: 140px 56px; position: relative; }
   .amenities-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .map-frame { height: 400px; }
   .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+  .testimonial-reviews { grid-template-columns: 1fr; }
+  .testimonial-score-row { flex-direction: column; text-align: center; }
+  .score-meta { text-align: center; }
 
   .page-hero { padding: 80px 24px 60px; }
   .page-footer-body { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 40px; }

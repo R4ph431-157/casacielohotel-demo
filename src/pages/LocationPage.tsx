@@ -27,14 +27,17 @@ export default function LocationPage() {
               ))}
             </div>
           </div>
-          <div className="map-frame">
-            <div className="wave wave-1" />
-            <div className="wave wave-2" />
-            <div className="wave wave-3" />
-            <div className="map-pin">
-              <div>{l.mapPin}</div>
-              <div className="pin-dot" />
-            </div>
+          <div className="map-frame map-real">
+            <iframe
+              src="https://maps.google.com/maps?q=H%C3%B4tel+La+Casa+Cielo+Fidjross%C3%A8+Cotonou+B%C3%A9nin&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={l.mapPin}
+            />
           </div>
         </div>
       </section>

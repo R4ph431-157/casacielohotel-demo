@@ -55,8 +55,26 @@ export const en: Translations = {
     },
     testimonial: {
       eyebrow: 'What our guests say',
-      quote: 'A peaceful haven, steps from the airport yet a world away from the hustle. Attentive staff, impeccable rooms, and the sound of the ocean lulling you to sleep. We will return.',
-      author: 'Sophie M. — Traveler, France',
+      score: '8.6',
+      scoreLabel: 'Very Good',
+      scoreSrc: 'Verified overall score',
+      reviews: [
+        {
+          quote: 'A peaceful haven, steps from the airport yet a world away from the hustle. Attentive staff, impeccable rooms, and the sound of the ocean lulling you to sleep. We will return.',
+          author: 'Sophie M.',
+          origin: 'France',
+        },
+        {
+          quote: 'Perfect for a business trip. The meeting rooms are well-equipped, the connection flawless, and the restaurant offers a splendid view of the sea.',
+          author: 'Amina K.',
+          origin: 'Lagos, Nigeria',
+        },
+        {
+          quote: 'An oasis of calm and luxury. The pool is magnificent and the staff incredibly attentive. I highly recommend this establishment!',
+          author: 'Marie-Claire D.',
+          origin: "Abidjan, Cote d'Ivoire",
+        },
+      ],
     },
     contact: {
       subtitle: 'Hotel · Cotonou',

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 
 function NavItem({ to, label }: { to: string; label: string }) {
@@ -16,7 +16,6 @@ function NavItem({ to, label }: { to: string; label: string }) {
 export default function Navbar() {
   const { t, language, toggleLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate();
   const close = () => setMenuOpen(false);
 
   useEffect(() => {
@@ -74,7 +73,7 @@ export default function Navbar() {
               </svg>
               <span className="lang-label">{language === 'fr' ? 'EN' : 'FR'}</span>
             </button>
-            <button className="nav-cta" onClick={() => navigate('/reservations')}>
+            <button className="nav-cta" onClick={() => window.open('https://live.ipms247.com/booking/book-rooms-hotellacasacielo', '_blank', 'noopener,noreferrer')}>
               {t.nav.book}
             </button>
           </div>
@@ -119,7 +118,7 @@ export default function Navbar() {
           </button>
           <button
             className="mobile-book-btn"
-            onClick={() => { navigate('/reservations'); close(); }}
+            onClick={() => { window.open('https://live.ipms247.com/booking/book-rooms-hotellacasacielo', '_blank', 'noopener,noreferrer'); close(); }}
           >
             {t.nav.book}
           </button>

@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR_DOMAIN/</loc>
+    <loc>https://casacielohotel-demo.netlify.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/rooms</loc>
+    <loc>https://casacielohotel-demo.netlify.app/rooms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/hotel</loc>
+    <loc>https://casacielohotel-demo.netlify.app/hotel</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/services</loc>
+    <loc>https://casacielohotel-demo.netlify.app/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/gallery</loc>
+    <loc>https://casacielohotel-demo.netlify.app/gallery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/attractions</loc>
+    <loc>https://casacielohotel-demo.netlify.app/attractions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/location</loc>
+    <loc>https://casacielohotel-demo.netlify.app/location</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/about</loc>
+    <loc>https://casacielohotel-demo.netlify.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/contact</loc>
+    <loc>https://casacielohotel-demo.netlify.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://YOUR_DOMAIN/reservations</loc>
+    <loc>https://casacielohotel-demo.netlify.app/reservations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
