@@ -4,7 +4,6 @@ import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import RoomsPage from './pages/RoomsPage';
-import HotelPage from './pages/HotelPage';
 import ServicesPage from './pages/ServicesPage';
 import GalleryPage from './pages/GalleryPage';
 import AttractionsPage from './pages/AttractionsPage';
@@ -21,7 +20,6 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/rooms" element={<RoomsPage />} />
-            <Route path="/hotel" element={<HotelPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/attractions" element={<AttractionsPage />} />

@@ -25,7 +25,7 @@ const TripadvisorIcon = () => (
 
 export default function PageFooter() {
   const { t } = useLanguage();
-  const { copyright, socials, quickLinks } = t.pageFooter;
+  const { copyright, socials, quickLinks, aboutUs } = t.pageFooter;
 
   return (
     <footer className="page-footer">
@@ -46,6 +46,13 @@ export default function PageFooter() {
               <TripadvisorIcon />
             </a>
           </div>
+        </div>
+
+        {/* About Us */}
+        <div className="pf-about">
+          <p className="pf-col-label">{aboutUs.title}</p>
+          <div className="pf-about-rule" />
+          <p className="pf-about-text">{aboutUs.text}</p>
         </div>
 
         {/* Quick links */}

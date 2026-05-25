@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 
 export default function Hero() {
   const { t } = useLanguage();
   const h = t.home.hero;
-  const navigate = useNavigate();
 
   const scrollToBooking = () => {
     document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
@@ -22,9 +20,6 @@ export default function Hero() {
         <div className="hero-cta-row">
           <button className="btn-gold" onClick={scrollToBooking}>
             {h.bookStay}
-          </button>
-          <button className="btn-outline" onClick={() => navigate('/hotel')}>
-            {h.discover}
           </button>
         </div>
       </div>

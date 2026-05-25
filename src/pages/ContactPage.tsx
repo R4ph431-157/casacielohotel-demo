@@ -19,8 +19,7 @@ export default function ContactPage() {
         <div className="visit-grid">
           <div className="visit-brand">
             <h2 className="display">
-              La Casa Cielo
-              <small>{c.subtitle}</small>
+              Book Now to Secure Availability
             </h2>
             <p>{c.lead}</p>
           </div>

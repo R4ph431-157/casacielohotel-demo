@@ -75,7 +75,6 @@ export const fr = {
       ],
     },
     contact: {
-      subtitle: 'Hôtel · Cotonou',
       lead: "Une maison de bord de mer, à Fidjrossè. Ouverte toute l'année, à deux minutes de l'aéroport. Réservations directes au meilleur tarif garanti.",
       address: {
         title: 'Adresse',

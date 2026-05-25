@@ -20,7 +20,7 @@ export const en: Translations = {
       eyebrow: 'Fidjrossè · Cotonou · Benin',
       title1: 'The sky,',
       title2: 'the sea, the silence.',
-      lead: 'Two minutes from the airport, steps from Fidjrossè beach. A hotel designed for those seeking something different; true rest, attentive service, and the feeling of being somewhere else without going far.',
+      lead: 'Get the best view to the beautiful sea and splendid surroundings at a moderate price. These rooms designed with open-concept living area are very bright and spacious - they are available with either double or queen beds.',
       bookStay: 'Book a Stay',
       discover: 'Discover the Hotel',
     },
@@ -77,8 +77,7 @@ export const en: Translations = {
       ],
     },
     contact: {
-      subtitle: 'Hotel · Cotonou',
-      lead: 'A seaside home in Fidjrossè. Open year-round, two minutes from the airport. Direct reservations at the best guaranteed rate.',
+      lead: 'The Hotel La Casa Cielo is one of the most stylish hotels in Benin. This modern take on the traditional alpine lodge is located at the foot of Benin.',
       address: {
         title: 'Address',
         lines: [
@@ -170,17 +169,18 @@ export const en: Translations = {
     roomAmenitiesLabel: 'In-room',
     hotelAmenitiesLabel: 'Hotel facilities',
   },
+
   hotel: {
     eyebrow: 'The Experience',
     title1: 'The art of',
     titleItalic: 'hospitality.',
-    lead: 'Our mission, from day one, has never changed: to welcome guests as we would in our own home. With care, without excess, without pretense. That is what sets a home apart from a hotel.',
+    lead: "Our purpose, since day one, hasn't changed: welcoming guests the way you'd welcome someone into your own home. With care, without excess, without formality. That is what sets a home apart from a hotel.",
     quote: '"Luxury is time."',
     features: [
       { num: '— 01', name: 'Restaurant', desc: 'International and Beninese cuisine, open for lunch and dinner.' },
       { num: '— 02', name: 'Pool', desc: 'Outdoor pool with terrace facing the sea.' },
       { num: '— 03', name: 'Concierge', desc: 'Available 24/7 for all your needs during your stay.' },
-      { num: '— 04', name: 'Event Rooms', desc: 'Conference and reception spaces, equipped and air-conditioned.' },
+      { num: '— 04', name: 'Event Spaces', desc: 'Conference and reception spaces, fully equipped and air-conditioned.' },
     ],
   },
   services: {
