@@ -8,37 +8,37 @@ type Category = 'exterior' | 'interior' | 'rooms' | 'pool' | 'restaurant' | 'hal
 
 interface Photo {
   file: string;
-  alt: string;
+  nameKey: string;
   category: Category;
 }
 
 const PHOTOS: Photo[] = [
   // Extérieur
-  { file: '1631255788IMG_3695.png',                          alt: "Entrée de l'hôtel",          category: 'exterior' },
-  { file: '1631266653IMG_3707.png',                          alt: 'Vue de la rue',              category: 'exterior' },
-  { file: '1631255788IMG_3823.png',                          alt: 'Façade extérieure',           category: 'exterior' },
+  { file: '1631255788IMG_3695.png',                          nameKey: 'hotelEntrance',          category: 'exterior' },
+  { file: '1631266653IMG_3707.png',                          nameKey: 'streetView',             category: 'exterior' },
+  { file: '1631255788IMG_3823.png',                          nameKey: 'hotelFacade',            category: 'exterior' },
   // Intérieur
-  { file: '1631266653BAR-A.png',                             alt: 'Bar terrasse',               category: 'interior' },
-  { file: '1631266653BAR-C.png',                             alt: 'Bar lounge',                 category: 'interior' },
+  { file: '1631266653BAR-A.png',                             nameKey: 'barTerrace',             category: 'interior' },
+  { file: '1631266653BAR-C.png',                             nameKey: 'barLounge',              category: 'interior' },
   // Chambres
-  { file: '1631256612CHAMBRE-303-B.png',                     alt: 'Chambre 303',                category: 'rooms' },
-  { file: '1631267022CHAMBRE-305-C.png',                     alt: 'Chambre 305',                category: 'rooms' },
-  { file: '613b0079e45e4_940.png',                           alt: 'Chambre lit double',          category: 'rooms' },
-  { file: '613afd09d76bf_CHAMBRE-303-B.png',                 alt: 'Chambre Deluxe',             category: 'rooms' },
-  { file: '613b0040aec45_new.png',                           alt: 'Chambre confort',            category: 'rooms' },
-  { file: '613b01c9a2128_400.png',                           alt: 'Chambre standard',           category: 'rooms' },
+  { file: '1631256612CHAMBRE-303-B.png',                     nameKey: 'prestigeRoomA',          category: 'rooms' },
+  { file: '1631267022CHAMBRE-305-C.png',                     nameKey: 'prestigeSeaViewA',       category: 'rooms' },
+  { file: '613b0079e45e4_940.png',                           nameKey: 'presidentialSuiteA',     category: 'rooms' },
+  { file: '613afd09d76bf_CHAMBRE-303-B.png',                 nameKey: 'prestigeRoomB',          category: 'rooms' },
+  { file: '613b0040aec45_new.png',                           nameKey: 'prestigeSeaViewB',       category: 'rooms' },
+  { file: '613b01c9a2128_400.png',                           nameKey: 'presidentialSuiteB',     category: 'rooms' },
   // Piscine
-  { file: '1631266654PISCINE-D.png',                         alt: 'Piscine vue aérienne',        category: 'pool' },
-  { file: '1631266654PISCINE-B.png',                         alt: 'Piscine & transats',         category: 'pool' },
-  { file: '1631266653PISCINE-A.png',                         alt: 'Piscine extérieure',          category: 'pool' },
+  { file: '1631266654PISCINE-D.png',                         nameKey: 'poolAerial',             category: 'pool' },
+  { file: '1631266654PISCINE-B.png',                         nameKey: 'poolSunbeds',            category: 'pool' },
+  { file: '1631266653PISCINE-A.png',                         nameKey: 'poolExterior',           category: 'pool' },
   // Restaurant
-  { file: '1631266967RESTAURANT-B.png',                      alt: 'Salle de restaurant',         category: 'restaurant' },
-  { file: '1631256984RESTAURANT-A.png',                      alt: 'Restaurant, mise en place',  category: 'restaurant' },
-  { file: '1631267209RESTAURANT-C.png',                      alt: 'Restaurant, vue ensemble',   category: 'restaurant' },
+  { file: '1631266967RESTAURANT-B.png',                      nameKey: 'restaurantDining',       category: 'restaurant' },
+  { file: '1631256984RESTAURANT-A.png',                      nameKey: 'restaurantSetup',        category: 'restaurant' },
+  { file: '1631267209RESTAURANT-C.png',                      nameKey: 'restaurantOverview',     category: 'restaurant' },
   // Salles
-  { file: '1631266967GRANDE-SALLE-DE-CONFERENCE-B.png',      alt: 'Grande salle de réception',  category: 'hall' },
-  { file: '1631256984GRANDE-SALLE-DE-CONFERENCE-D.png',      alt: 'Salle de conférence',         category: 'hall' },
-  { file: '1631266967PETITE-SALLE-DE-CONFERENCE-C.png',      alt: 'Salle de réunion',            category: 'hall' },
+  { file: '1631266967GRANDE-SALLE-DE-CONFERENCE-B.png',      nameKey: 'largeConferenceRoom',    category: 'hall' },
+  { file: '1631256984GRANDE-SALLE-DE-CONFERENCE-D.png',      nameKey: 'conferenceRoom',         category: 'hall' },
+  { file: '1631266967PETITE-SALLE-DE-CONFERENCE-C.png',      nameKey: 'meetingRoom',            category: 'hall' },
 ];
 
 function spanClass(i: number) {
@@ -98,7 +98,7 @@ export default function GalleryPage() {
       {/* ── Gallery body ── */}
       <section className="gallery-section">
 
-        {/* ── Tab nav ── */}
+        {/* ── Filter nav ── */}
         <nav className="gallery-nav">
           {cats.map(c => (
             <button
@@ -123,11 +123,10 @@ export default function GalleryPage() {
               style={{ '--cd': `${Math.min(i * 0.06, 0.48)}s` } as CSSProperties}
               onClick={() => setLightbox(photo)}
             >
-              <span className="gallery-card-num">{String(i + 1).padStart(2, '0')}</span>
-              <img src={`${B}${photo.file}`} alt={photo.alt} loading="lazy" />
+              <img src={`${B}${photo.file}`} alt={(g.photoNames as Record<string, string>)[photo.nameKey]} loading="lazy" />
               <div className="gallery-card-info">
                 <span className="gallery-card-line" />
-                <p className="gallery-card-name">{photo.alt}</p>
+                <p className="gallery-card-name">{(g.photoNames as Record<string, string>)[photo.nameKey]}</p>
               </div>
             </div>
           ))}
@@ -157,8 +156,8 @@ export default function GalleryPage() {
             </svg>
           </button>
           <div className="lightbox-inner" onClick={e => e.stopPropagation()}>
-            <img src={`${B}${lightbox.file}`} alt={lightbox.alt} />
-            <p className="lightbox-caption">{lightbox.alt}</p>
+            <img src={`${B}${lightbox.file}`} alt={(g.photoNames as Record<string, string>)[lightbox.nameKey]} />
+            <p className="lightbox-caption">{(g.photoNames as Record<string, string>)[lightbox.nameKey]}</p>
           </div>
           {/* next */}
           <button

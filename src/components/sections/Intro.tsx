@@ -15,6 +15,7 @@ export default function Intro() {
         {i.title2}
       </h2>
       <p className="lead-prose">{i.lead}</p>
+      <p className="lead-prose lead-prose--second">{i.lead2}</p>
     </section>
   );
 }

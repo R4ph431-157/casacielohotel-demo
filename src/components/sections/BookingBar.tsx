@@ -15,6 +15,10 @@ export default function BookingBar() {
   const [guests, setGuests] = useState(b.guestsOptions[1]);
   const [room, setRoom] = useState(b.roomOptions[0]);
 
+  const openPicker = (e: React.MouseEvent<HTMLInputElement>) => {
+    try { e.currentTarget.showPicker(); } catch { /* unsupported browser */ }
+  };
+
   const handleCheck = () => {
     window.open(BOOKING_URL, '_blank', 'noopener,noreferrer');
   };
@@ -23,11 +27,11 @@ export default function BookingBar() {
     <div id="booking" className="booking-bar">
       <div className="booking-field">
         <label>{b.arrival}</label>
-        <input type="date" value={arrival} min={today} onChange={e => setArrival(e.target.value)} />
+        <input type="date" value={arrival} min={today} onChange={e => setArrival(e.target.value)} onClick={openPicker} />
       </div>
       <div className="booking-field">
         <label>{b.departure}</label>
-        <input type="date" value={departure} min={arrival} onChange={e => setDeparture(e.target.value)} />
+        <input type="date" value={departure} min={arrival} onChange={e => setDeparture(e.target.value)} onClick={openPicker} />
       </div>
       <div className="booking-field">
         <label>{b.guests}</label>

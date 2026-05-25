@@ -20,17 +20,13 @@ export default function Hero() {
         </h1>
         <p className="lead">{h.lead}</p>
         <div className="hero-cta-row">
-          <button className="btn-gold" onClick={() => window.open('https://live.ipms247.com/booking/book-rooms-hotellacasacielo', '_blank', 'noopener,noreferrer')}>
+          <button className="btn-gold" onClick={scrollToBooking}>
             {h.bookStay}
           </button>
           <button className="btn-outline" onClick={() => navigate('/hotel')}>
             {h.discover}
           </button>
         </div>
-      </div>
-      <div className="scroll-hint" onClick={scrollToBooking} style={{ cursor: 'pointer' }}>
-        <div>{h.scroll}</div>
-        <div className="scroll-line" />
       </div>
     </section>
   );
