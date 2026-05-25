@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
@@ -11,10 +12,17 @@ import LocationPage from './pages/LocationPage';
 import ReservationsPage from './pages/ReservationsPage';
 import ContactPage from './pages/ContactPage';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />

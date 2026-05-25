@@ -31,17 +31,26 @@ export default function RoomsPage() {
   const { t } = useLanguage();
   const r = t.rooms;
   const [activeImgs, setActiveImgs] = useState([0, 0, 0]);
+  const [loaded, setLoaded] = useState<Set<string>>(
+    () => new Set(ROOM_IMAGES.map((_, i) => `${i}-0`))
+  );
+
+  const markLoaded = (roomIdx: number, imgIdx: number) =>
+    setLoaded(s => new Set(s).add(`${roomIdx}-${imgIdx}`));
 
   const go = (roomIdx: number, dir: number) => {
     setActiveImgs(prev => {
       const next = [...prev];
       const len = ROOM_IMAGES[roomIdx].length;
-      next[roomIdx] = (prev[roomIdx] + dir + len) % len;
+      const nextIdx = (prev[roomIdx] + dir + len) % len;
+      next[roomIdx] = nextIdx;
+      markLoaded(roomIdx, nextIdx);
       return next;
     });
   };
 
   const setImg = (roomIdx: number, imgIdx: number) => {
+    markLoaded(roomIdx, imgIdx);
     setActiveImgs(prev => {
       const next = [...prev];
       next[roomIdx] = imgIdx;
@@ -70,7 +79,7 @@ export default function RoomsPage() {
                   <div
                     key={src}
                     className={`rch-img-layer${di === activeImgs[i] ? ' rch-img-layer--on' : ''}`}
-                    style={{ backgroundImage: `url('${src}')` }}
+                    style={loaded.has(`${i}-${di}`) ? { backgroundImage: `url('${src}')` } : undefined}
                   />
                 ))}
                 <div className="rch-img-overlay" />
