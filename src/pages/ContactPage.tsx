@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext';
+import PageFooter from '../components/layout/PageFooter';
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -48,16 +49,9 @@ export default function ContactPage() {
             {c.hours.lines.map(line => <p key={line}>{line}</p>)}
           </div>
         </div>
-
-        <div className="footer-bottom">
-          <div>{c.copyright}</div>
-          <div className="socials">
-            <a href="#">{c.socials.facebook}</a>
-            <a href="#">{c.socials.instagram}</a>
-            <a href="#">{c.socials.tripadvisor}</a>
-          </div>
-        </div>
       </section>
+
+      <PageFooter />
     </>
   );
 }
