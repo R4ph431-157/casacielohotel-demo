@@ -17,9 +17,11 @@ const PHOTOS: Photo[] = [
   { file: '1631255788IMG_3695.png',                          nameKey: 'hotelEntrance',          category: 'exterior' },
   { file: '1631266653IMG_3707.png',                          nameKey: 'streetView',             category: 'exterior' },
   { file: '1631255788IMG_3823.png',                          nameKey: 'hotelFacade',            category: 'exterior' },
+  { file: 'display.jpg',                                     nameKey: 'hotelNight',             category: 'exterior' },
   // Intérieur
   { file: '1631266653BAR-A.png',                             nameKey: 'barTerrace',             category: 'interior' },
   { file: '1631266653BAR-C.png',                             nameKey: 'barLounge',              category: 'interior' },
+  { file: 'photo_2026-05-26_04-04-32.jpg',                   nameKey: 'barLoungeInterior',      category: 'interior' },
   // Chambres
   { file: '1631256612CHAMBRE-303-B.png',                     nameKey: 'prestigeRoomA',          category: 'rooms' },
   { file: '1631267022CHAMBRE-305-C.png',                     nameKey: 'prestigeSeaViewA',       category: 'rooms' },
@@ -27,18 +29,30 @@ const PHOTOS: Photo[] = [
   { file: '613afd09d76bf_CHAMBRE-303-B.png',                 nameKey: 'prestigeRoomB',          category: 'rooms' },
   { file: '613b0040aec45_new.png',                           nameKey: 'prestigeSeaViewB',       category: 'rooms' },
   { file: '613b01c9a2128_400.png',                           nameKey: 'presidentialSuiteB',     category: 'rooms' },
+  { file: 'photo_2026-05-26_04-04-59.jpg',                   nameKey: 'prestigeRoomC',          category: 'rooms' },
   // Piscine
   { file: '1631266654PISCINE-D.png',                         nameKey: 'poolAerial',             category: 'pool' },
   { file: '1631266654PISCINE-B.png',                         nameKey: 'poolSunbeds',            category: 'pool' },
   { file: '1631266653PISCINE-A.png',                         nameKey: 'poolExterior',           category: 'pool' },
+  { file: 'photo_2026-05-26_04-05-05.jpg',                   nameKey: 'poolTerrace',            category: 'pool' },
   // Restaurant
   { file: '1631266967RESTAURANT-B.png',                      nameKey: 'restaurantDining',       category: 'restaurant' },
   { file: '1631256984RESTAURANT-A.png',                      nameKey: 'restaurantSetup',        category: 'restaurant' },
   { file: '1631267209RESTAURANT-C.png',                      nameKey: 'restaurantOverview',     category: 'restaurant' },
+  { file: 'photo_2026-05-26_04-04-37.jpg',                   nameKey: 'dishLambChops',          category: 'restaurant' },
+  { file: 'photo_2026-05-26_04-04-40.jpg',                   nameKey: 'dishChicken',            category: 'restaurant' },
+  { file: 'photo_2026-05-26_04-04-43.jpg',                   nameKey: 'dishCreamMeat',          category: 'restaurant' },
+  { file: 'photo_2026-05-26_04-04-46.jpg',                   nameKey: 'dishFish',               category: 'restaurant' },
+  { file: 'photo_2026-05-26_04-04-49.jpg',                   nameKey: 'dishPrawns',             category: 'restaurant' },
+  { file: 'photo_2026-05-26_04-04-53.jpg',                   nameKey: 'dishBrochettes',         category: 'restaurant' },
   // Salles
   { file: '1631266967GRANDE-SALLE-DE-CONFERENCE-B.png',      nameKey: 'largeConferenceRoom',    category: 'hall' },
   { file: '1631256984GRANDE-SALLE-DE-CONFERENCE-D.png',      nameKey: 'conferenceRoom',         category: 'hall' },
   { file: '1631266967PETITE-SALLE-DE-CONFERENCE-C.png',      nameKey: 'meetingRoom',            category: 'hall' },
+  { file: 'photo_2026-05-26_04-05-02.jpg',                   nameKey: 'conferenceClassroom',    category: 'hall' },
+  { file: 'photo_2026-05-26_04-05-08.jpg',                   nameKey: 'conferenceUShape',       category: 'hall' },
+  { file: 'photo_2026-05-26_04-05-11.jpg',                   nameKey: 'seminarHall',            category: 'hall' },
+  { file: 'photo_2026-05-26_04-05-14.jpg',                   nameKey: 'eventHallLive',          category: 'hall' },
 ];
 
 function spanClass(i: number) {
@@ -156,7 +170,7 @@ export default function GalleryPage() {
             </svg>
           </button>
           <div className="lightbox-inner" onClick={e => e.stopPropagation()}>
-            <img src={`${B}${lightbox.file}`} alt={(g.photoNames as Record<string, string>)[lightbox.nameKey]} />
+            <img src={`${B}${lightbox.file}`} alt={(g.photoNames as Record<string, string>)[lightbox.nameKey]} loading="lazy" />
             <p className="lightbox-caption">{(g.photoNames as Record<string, string>)[lightbox.nameKey]}</p>
           </div>
           {/* next */}

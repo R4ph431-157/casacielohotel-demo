@@ -7,6 +7,7 @@ const icons = [
   <path d="M5 21v-7l4-4 4 4 6-6v13M3 21h18" />,
   <path d="M12 2a10 10 0 1 0 10 10M12 2v10l7 7" />,
   <path d="M3 12h2l2-9 4 18 4-13 2 4h4" />,
+  <path d="M6.5 6v12M17.5 6v12M3 9h7M3 15h7M14 9h7M14 15h7M6.5 12h11" />,
 ];
 
 export default function ServicesPage() {

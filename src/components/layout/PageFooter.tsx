@@ -33,8 +33,8 @@ export default function PageFooter() {
 
         {/* Brand + socials */}
         <div className="pf-brand">
-          <div className="pf-logo">La Casa Cielo</div>
-          <p className="pf-tagline">Hôtel · Fidjrossè · Cotonou</p>
+          <img src="/assets/imgs/logo.png" alt="La Casa Cielo" className="pf-logo-img" loading="lazy" />
+          <p className="pf-tagline">Fidjrossè · Cotonou</p>
           <div className="pf-socials">
             <a href="#" className="pf-social-icon" aria-label={socials.facebook}>
               <FacebookIcon />

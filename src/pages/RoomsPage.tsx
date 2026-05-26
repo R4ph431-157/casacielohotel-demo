@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import PageFooter from '../components/layout/PageFooter';
 import { useLanguage } from '../context/LanguageContext';
-
-const BOOKING_URL = 'https://live.ipms247.com/booking/book-rooms-hotellacasacielo';
+import { BOOKING_URL } from '../lib/constants';
 
 const ROOM_IMAGES = [
   [

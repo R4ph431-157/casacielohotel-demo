@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
+import { BOOKING_URL } from '../../lib/constants';
 
 function NavItem({ to, label }: { to: string; label: string }) {
   return (
@@ -53,8 +54,7 @@ export default function Navbar() {
 
         {/* ── Centered logo ── */}
         <Link to="/" className="logo">
-          La Casa Cielo
-          <small>Hôtel · Cotonou</small>
+          <img src="/assets/imgs/logo.png" alt="La Casa Cielo" className="logo-img" />
         </Link>
 
         {/* ── Right ── */}
@@ -73,7 +73,7 @@ export default function Navbar() {
               </svg>
               <span className="lang-label">{language === 'fr' ? 'EN' : 'FR'}</span>
             </button>
-            <button className="nav-cta" onClick={() => window.open('https://live.ipms247.com/booking/book-rooms-hotellacasacielo', '_blank', 'noopener,noreferrer')}>
+            <button className="nav-cta" onClick={() => window.open(BOOKING_URL, '_blank', 'noopener,noreferrer')}>
               {t.nav.book}
             </button>
           </div>
@@ -118,7 +118,7 @@ export default function Navbar() {
           </button>
           <button
             className="mobile-book-btn"
-            onClick={() => { window.open('https://live.ipms247.com/booking/book-rooms-hotellacasacielo', '_blank', 'noopener,noreferrer'); close(); }}
+            onClick={() => { window.open(BOOKING_URL, '_blank', 'noopener,noreferrer'); close(); }}
           >
             {t.nav.book}
           </button>

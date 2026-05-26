@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import PageFooter from '../components/layout/PageFooter';
 import { useLanguage } from '../context/LanguageContext';
@@ -23,17 +23,6 @@ export default function ReservationsPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const p = new URLSearchParams(location.search);
-    setForm(prev => ({
-      ...prev,
-      arrival: p.get('arrival') ?? prev.arrival,
-      departure: p.get('departure') ?? prev.departure,
-      guests: p.get('guests') ?? prev.guests,
-      room: p.get('room') ?? prev.room,
-    }));
-  }, [location.search]);
 
   const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm(prev => ({ ...prev, [field]: e.target.value }));

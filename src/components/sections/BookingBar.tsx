@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-
-const BOOKING_URL = 'https://live.ipms247.com/booking/book-rooms-hotellacasacielo';
+import { BOOKING_URL } from '../../lib/constants';
 
 export default function BookingBar() {
   const { t } = useLanguage();
