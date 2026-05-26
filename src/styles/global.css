@@ -1939,7 +1939,7 @@ section { padding: 140px 56px; position: relative; }
       url('/assets/imgs/display.jpg') center top / cover no-repeat,
       linear-gradient(170deg, #4a7ba8 0%, #2d5478 35%, #1B3A5C 70%, #0F2540 100%);
   }
-  .hero-content { padding: 0 24px 22vh; }
+  .hero-content { padding: 56px 24px 22vh; }
   .hero-eyebrow { white-space: nowrap; font-size: 9px; letter-spacing: .18em; gap: 10px; }
   .hero-eyebrow::before, .hero-eyebrow::after { width: 22px; }
   .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 10px; }

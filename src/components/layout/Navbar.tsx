@@ -54,7 +54,10 @@ export default function Navbar() {
 
         {/* ── Centered logo ── */}
         <Link to="/" className="logo">
-          <img src="/assets/imgs/logo.png" alt="La Casa Cielo" className="logo-img" />
+          <picture>
+            <source srcSet="/assets/imgs/logo.webp" type="image/webp" />
+            <img src="/assets/imgs/logo.png" alt="La Casa Cielo" className="logo-img" fetchPriority="high" width="126" height="84" />
+          </picture>
         </Link>
 
         {/* ── Right ── */}
